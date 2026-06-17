@@ -4,7 +4,7 @@ Paragraph-level sentiment extraction from earnings call transcripts, correlated 
 
 A DistilBERT model is fine-tuned on ~16,000 labeled paragraphs from 300 earnings calls. Labels are generated using GPT-4o-mini (LLM-assisted weak supervision) rather than hand-annotation. The model classifies each paragraph as **positive**, **neutral**, or **negative** with respect to the company's future financial outlook. Call-level sentiment scores are then correlated against 1-day and 5-day post-call price movement.
 
-**[Live Dashboard →](https://your-app.streamlit.app)**
+**[Live Dashboard →](https://earningscallsentimentanalyser-y4cuukgsofrznzhvz4amcb.streamlit.app)**
 
 ---
 
