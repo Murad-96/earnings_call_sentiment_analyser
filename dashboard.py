@@ -177,7 +177,7 @@ with tab1:
         xaxis=axis_style(),
         yaxis=axis_style(title='Sentiment Score'),
     )
-    st.plotly_chart(fig1, use_container_width=True)
+    st.plotly_chart(fig1, width="stretch")
 
     # Stacked bar — sentiment breakdown
     st.markdown('<div class="section-header">Sentiment Breakdown per Call</div>',
@@ -199,7 +199,7 @@ with tab1:
         xaxis=axis_style(),
         yaxis=axis_style(tickformat='.0%'),
     )
-    st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig2, width="stretch")
 
     # Price reaction bar
     if cdf['price_change_1d'].notna().any():
@@ -218,7 +218,7 @@ with tab1:
             xaxis=axis_style(),
             yaxis=axis_style(tickformat='.1%'),
         )
-        st.plotly_chart(fig3, use_container_width=True)
+        st.plotly_chart(fig3, width="stretch")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -260,8 +260,12 @@ with tab2:
             hole=0.65, textinfo='label+percent',
             textfont=dict(size=11), showlegend=False,
         ))
-        fig_pie.update_layout(**BASE_LAYOUT, height=240, margin=dict(l=0, r=0, t=10, b=10))
-        st.plotly_chart(fig_pie, use_container_width=True)
+        fig_pie.update_layout(
+        plot_bgcolor="rgba(0,0,0,0)", paper_bgcolor="rgba(0,0,0,0)",
+        font=dict(family="Inter", color="#8b949e", size=12),
+        height=240, margin=dict(l=0, r=0, t=10, b=10)
+    )
+        st.plotly_chart(fig_pie, width="stretch")
 
     with right:
         st.markdown('<div class="section-header">Most Bullish Paragraph</div>', unsafe_allow_html=True)
@@ -339,11 +343,11 @@ with tab3:
     with s1:
         st.plotly_chart(make_scatter('sentiment_score', 'price_change_1d',
                                      '1-Day Price Change', '1-Day Return'),
-                        use_container_width=True)
+                        width="stretch")
     with s2:
         st.plotly_chart(make_scatter('sentiment_score', 'price_change_5d',
                                      '5-Day Price Change', '5-Day Return'),
-                        use_container_width=True)
+                        width="stretch")
 
     # Histogram
     st.markdown('<div class="section-header">Distribution of Sentiment Scores</div>',
@@ -355,7 +359,7 @@ with tab3:
         xaxis=axis_style(title='Sentiment Score'),
         yaxis=axis_style(title='Number of Calls'),
     )
-    st.plotly_chart(fig_hist, use_container_width=True)
+    st.plotly_chart(fig_hist, width="stretch")
 
     # Interpretation
     st.markdown(f"""
