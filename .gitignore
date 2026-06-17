@@ -1,0 +1,12 @@
+*.csv
+*.zip
+*.tar.gz
+*.pkl
+*data
+*ipynb
+# Ignore Python bytecode caching directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.DS_Store

@@ -1,0 +1,7 @@
+beautifulsoup4
+pandas
+matplotlib
+streamlit
+plotly
+pandas
+scipy
