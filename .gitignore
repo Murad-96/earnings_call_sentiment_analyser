@@ -1,4 +1,4 @@
-*.csv
+/src/*.csv
 *.zip
 *.tar.gz
 *.pkl
