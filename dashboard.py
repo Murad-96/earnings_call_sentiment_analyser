@@ -19,7 +19,7 @@ st.markdown("""
         background-color: #0d1117;
         color: #e6edf3;
     }
-    .block-container { padding: 2rem 3rem; max-width: 1400px; }
+    .block-container { padding: 3rem 3rem 2rem; max-width: 1400px; }
     .metric-card {
         background: #161b22;
         border: 1px solid #21262d;
@@ -115,7 +115,7 @@ df = load_data()
 
 # ── Header ────────────────────────────────────────────────────────────────────
 st.markdown("""
-<div style="margin-bottom:2rem;">
+<div style="margin-bottom:2rem; margin-top:1rem;">
     <div style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;
                 color:#58a6ff;font-weight:600;margin-bottom:0.4rem;">
         NLP · Fine-tuned DistilBERT
